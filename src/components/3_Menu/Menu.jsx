@@ -1,4 +1,5 @@
 import './Menu.css';
+import { Drink } from '../3-1_Drink/Drink';
 
 export const Menu = () => (
     <section id='menu' className="menu">
@@ -8,6 +9,32 @@ export const Menu = () => (
             Vyberte si z našeho interaktivního menu a nemusíte čekat na obsluhu
           </p>
           <div className="drinks-list">
+            <Drink
+              id={0}
+              name="Romano"
+              ordered={false}
+              image="http://localhost:4000/assets/cups/romano.png"
+              layers={[
+                {
+                  color: '#fbdf5b',
+                  label: 'citrón',
+                },
+                {
+                  color: '#613916',
+                  label: 'espresso',
+                },
+              ]}
+            />
+          </div>
+
+          <div className="order-detail">
+            <a href="/order.html">Detail objednávky</a>
+          </div>
+        </div>
+    </section>
+)
+
+/*
             <div className="drink">
               <div className="drink__product">
                 <div className="drink__cup">
@@ -29,6 +56,8 @@ export const Menu = () => (
               </form>
             </div>
 
+
+            
             <div className="drink">
               <div className="drink__product">
                 <div className="drink__cup">
@@ -49,6 +78,8 @@ export const Menu = () => (
                 </button>
               </form>
             </div>
+
+
 
             <div className="drink">
               <div className="drink__product">
@@ -74,11 +105,4 @@ export const Menu = () => (
                 </button>
               </form>
             </div>
-          </div>
-
-          <div className="order-detail">
-            <a href="/order.html">Detail objednávky</a>
-          </div>
-        </div>
-    </section>
-)
+*/
