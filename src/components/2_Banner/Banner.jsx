@@ -1,4 +1,3 @@
-//import '../global.css';
 import './Banner.css';
 
 export const Banner = () => (

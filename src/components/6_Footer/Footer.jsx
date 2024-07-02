@@ -1,4 +1,3 @@
-//import '../global.css';
 import './Footer.css';
 
 export const Footer = () => (
