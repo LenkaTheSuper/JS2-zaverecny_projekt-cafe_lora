@@ -56,7 +56,4 @@ drinkControls.forEach((btn) => {
     
     window.location.reload()
   })
-
-
-
 })
