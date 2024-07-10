@@ -17,7 +17,7 @@ console.log(drinks)
 document.querySelector('#root').innerHTML = render(
   <div className="page">
     <header>
-      <Header />
+      <Header showMenu={true}/>
     </header>
     <main>
       <Banner />
