@@ -16,11 +16,38 @@ export const Drink = ({id, name, ordered, image, layers}) => (
                 }
             </div>
         </div>
-        <form className="drink__controls">
-            <input type="hidden" className="order-id" value="0" />
-            <button className="order-btn">
-                Objednat
+        <form data-id={id} data-ordered={ordered} className="drink__controls">
+            <button className={ordered ? "order-btn" : "order-btn order-btn--ordered"}>
+                {
+                   ordered ? "Zrušit" : "Objednat"
+                }
             </button>
         </form>
     </div>
 )
+
+/*
+const orderId = document.querySelector(".order-id").value
+if (orderId === True) {
+    document.querySelector(".drink_controls button").textContent = "Zrušit"
+} else {
+    document.querySelector(".drink_controls button").textContent = "Objednat"
+}
+
+const orderBtns = document.querySelectorAll(".order-btn")
+orderBtns.forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+        const postId = e.target.dataset.id
+
+        const orderId = document.querySelector(".order-id").value
+        if (orderId === True) {
+            document.querySelector(".drink_controls button").textContent = "Zrušit"
+            orderId = False
+
+        } else {
+            document.querySelector(".drink_controls button").textContent = "Objednat"
+            orderId = True
+        }
+    })
+})
+*/
